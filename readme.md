@@ -1,8 +1,14 @@
 # JWT Node.js example
 
-Example application that implements JWT based authentication. Read the blog post [here](https://sohamkamani.com/blog/javascript/2019-03-29-node-jwt-authentication/)
+Example application code for my blog post on [implementing JWT based authentication in Node.js](https://www.sohamkamani.com/nodejs/jwt-authentication).
 
-To run this application, run the command:
+To run this application, first install dependencies:
+
+```
+npm install
+```
+
+Then, run the command:
 
 ```sh
 node ./index
