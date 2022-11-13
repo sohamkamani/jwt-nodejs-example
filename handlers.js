@@ -23,7 +23,6 @@ const signIn = (req, res) => {
     algorithm: 'HS256',
     expiresIn: jwtExpirySeconds
   })
-  console.log('token:', token)
 
   // set the cookie as the token string, with a similar max age as the token
   // here, the max age is in milliseconds, so we multiply by 1000
@@ -99,8 +98,14 @@ const refresh = (req, res) => {
   res.end()
 }
 
+const logout = (req, res) => {
+  res.cookie('token', '', { maxAge: 0 })
+  res.end()
+}
+
 module.exports = {
   signIn,
   welcome,
-  refresh
+  refresh,
+  logout
 }
